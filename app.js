@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-    res.send({ message: 'Hello from test server',body:req.body });
+    res.send({ message: 'Hello from test server', body: req.body });
 });
 
 
