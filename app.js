@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000
 
 
 app.get('/', function (req, res) {
@@ -8,11 +9,10 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-    console.log(req.body)
-    res.send({ message: 'Hello from test server' });
+    res.send({ message: 'Hello from test server',body:req.body });
 });
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("El servidor está inicializado en el puerto 3000");
 });
