@@ -13,7 +13,6 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
     console.log("query", req.query);
-
     res.send({ message: 'HELLO', body: req.body })
 });
 
