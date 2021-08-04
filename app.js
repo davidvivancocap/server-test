@@ -8,15 +8,16 @@ const PORT = process.env.PORT || 3000
 
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.post('/', function (req, res) {
-    console.log(req.query)
-    res.status(200)
+    console.log("query", req.query);
+
+    res.send({ message: 'HELLO', body: req.body })
 });
 
 
 app.listen(PORT, () => {
-    console.log("El servidor está inicializado en el puerto 3000");
+    console.log("El servidor está inicializado en el puerto " + PORT);
 });
